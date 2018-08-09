@@ -3,7 +3,7 @@ const mongoose = require("mongoose");
 
 const app = express();
 
-mongoose.connect(process.env.DATABASE_URL || 'mongodb://localhost:27017/mongo-1', { useNewUrlParser: true });
+mongoose.connect(process.env.MONGODB_URL || 'mongodb://localhost:27017/mongo-1', { useNewUrlParser: true });
 
 const VisitorSchema = new mongoose.Schema({
   name: {
