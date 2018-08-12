@@ -19,4 +19,4 @@ app.get("/", async (req, res) => {
   res.send("<h1>El visitante fue almacenado con éxito.</h1>")
 });
 
-app.listen(3000);
+app.listen(3000, () => console.log("Listening on port 3000 ..."));
