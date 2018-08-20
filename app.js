@@ -12,7 +12,7 @@ const VisitorSchema = new mongoose.Schema({
 const Visitor = mongoose.model("Visitor", VisitorSchema);
 
 app.get("/", async (req, res) => {
-  const visitor = new Visitor({ name: req.params.name || "Anónimo" });
+  const visitor = new Visitor({ name: req.query.name || "Anónimo" });
   await visitor.save()
 
   res.send("<h1>El visitante fue almacenado con éxito.</h1>")
